@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0; 
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: "Roboto";
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: rgba(119, 113, 113, 0.966);
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.logo img{
+    height: 100px;
+    margin-right: 10px;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav li{
+    margin-right: 15px;
+}
+
+nav a{
+    font-size: x-large;
+    font-weight: 800;
+    color: black;
+}
+
+nav a:hover{
+    color: white
+}
+
+/*-----------------------body-------------------*/
+
+section{
+    display: flex;
+}
+.productos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: calc(25% - 15px);
+    padding: 15px;
+    
+}
+.productos-h2{
+    color: black;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.productos-h3{
+    font-size: 20px;
+    color: black;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.productos-p{
+    font-size: 15px;
+    color: black;
+    margin-bottom: 15px;
+}
+.productos-button{
+    background-color: black;
+    padding: 5px 10px;
+    color:white;
+    text-decoration: none;
+    font-weight: 800;
+    cursor: pointer;
+}
+.productos-button:hover{
+    background-color: white;
+    color: black;
+}
+.prod-img{
+    padding: 20px;
+    flex-basis: 50%;
+    margin-right: 15px;
+    box-shadow: 0 0 20px black;
+    text-align: center;
+}
+.prod-img:hover{
+    padding: 40px;
+    transition: 0.5s;
+}
+.productos img{
+    height: 300px;
+    flex-basis: 50%;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+/*-----------footer-----------*/
+
+footer{
+    display: flex;
+    min-height: 70px;
+    background-color: rgba(119, 113, 113, 0.966);
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-h3{
+    color: black;
+    font-weight: 700;
+}
+
+footer img{
+    height: 50px;
+}
+
+/*------------Responsive-------------*/
+
+@media (max-width: 700px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+    .productos{
+        flex-direction: column;
+    }
+}
