@@ -1,32 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    padding: 0;
-    margin: 0; 
-    text-decoration: none;
-    list-style: none;
-}
 
-body{
-    font-family: "Roboto";
-}
-
-img{
-    max-width: 100%;
-}
+/* -------------------HEADER------------------- */
 
 header{
-    display: flex;
-    min-height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 1000;
     background-color: rgba(119, 113, 113, 0.966);
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-}
-.logo{
-    display: flex;
-    align-items: center;
-    color: black;
+    
 }
 
 .logo img{
@@ -34,38 +21,82 @@ header{
     margin-right: 10px;
 }
 
-nav ul{
-    display: flex;
-}
-
-nav li{
-    margin-right: 15px;
-}
-
-nav a{
-    font-size: x-large;
-    font-weight: 800;
+h1 a {
     color: black;
+    text-decoration: solid;
+    font-size: 50px;
 }
 
-nav a:hover{
-    color: white
+.nav-link{
+    text-decoration: solid;
+    color: black;
+    font-size: 20px;
 }
 
-/*-----------------------body-------------------*/
+.nav-link:hover{
+    color: white;
+}
 
-section{
+
+
+
+
+
+/* ----------------MAIN INICIO--------------- */
+
+main {
+    margin-top: 100px;
+    background-color: white;
+}
+
+.gran-contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.contenedor{
+    position: relative;
+}
+
+.imagen-inicio{
+    width: 20vw;
+    height: 500px;
+}
+
+.texto-encima{
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px black;
+      text-align: center;
+}
+
+/* -------------Main Productos------------------ */
+
+/* .contenedor-productos{
     display: flex;
-}
+    flex-direction: column;
+
+} */
 .productos{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-basis: calc(25% - 15px);
     padding: 15px;
+    gap: 20px;
     
 }
-.productos-h2{
+
+.h2-productos{
     color: black;
     font-size: 50px;
     text-transform: uppercase;
@@ -73,6 +104,26 @@ section{
     margin-top: 50px;
     margin-bottom: 30px;
 }
+
+.prod-img{
+    padding: 20px;
+    flex-basis: 50%;
+    margin-right: 15px;
+    box-shadow: 0 0 20px black;
+    text-align: center;
+}
+
+.prod-img:hover{
+    transform: scale(1.1);
+}
+
+.productos img{
+    height: 400px;
+    flex-basis: 50%;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
 .productos-h3{
     font-size: 20px;
     color: black;
@@ -97,47 +148,219 @@ section{
     background-color: white;
     color: black;
 }
-.prod-img{
+
+/* -----------Main contacto-------------------- */
+
+
+.contenedor-contacto{
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    grid-template-areas:
+    
+    "info form";
+    
+    gap: 30px;
+    height: 100vh;
+    padding: 10px;
+    background-color: white;
+    margin-left: 30px;
+}
+    
+
+.formulario{
+    grid-area: form;
+    margin-top: 80px;
+    background-color: white;
     padding: 20px;
-    flex-basis: 50%;
-    margin-right: 15px;
-    box-shadow: 0 0 20px black;
-    text-align: center;
-}
-.prod-img:hover{
-    padding: 40px;
-    transition: 0.5s;
-}
-.productos img{
-    height: 300px;
-    flex-basis: 50%;
-    margin-right: 15px;
-    margin-bottom: 20px;
 }
 
-/*-----------footer-----------*/
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 1000px;
+}
+
+
+form label{
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+
+form textarea{
+    padding: 50px;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+
+form input[type="submit"]{
+    background-color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.datos{
+    grid-area: info;
+    place-items: center;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    
+
+}
+
+.h2-contacto{
+    color: black;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: start;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.datos h3{
+    color: black;
+    font-size: 30px;
+    text-decoration: solid;
+}
+
+.datos div{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.datos div img{
+    height: 40px;
+}
+
+.datos p{
+    margin-bottom: 40px;
+}
+
+.datos p a{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+/*------------Main sobre nosotros----------------*/
+
+.contenedor-sobrenosotros{
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "descripcion sobrenosotrosimg"
+    "secciones sobrenosotrosimg"
+    ;
+    background-color: white;
+    
+    
+    
+}
+
+.descripcion{
+    grid-area: descripcion;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.descripcion h2{
+    color: black;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.descripcion p{
+    color:black;
+
+}
+
+.sobrenosotrosimg{
+    grid-area: sobrenosotrosimg;
+    width: 40vw;
+}
+
+.sobrenosotrosimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.secciones{
+    grid-area: secciones;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    gap: 20px;
+    height: 100%;
+    margin-bottom: 10px;
+    
+}
+
+
+
+.card-img-top{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body a{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.card-body a:hover{
+    background-color: white;
+    color: black;
+}
+/* -------------------FOOTER-------------------- */
 
 footer{
     display: flex;
     min-height: 70px;
     background-color: rgba(119, 113, 113, 0.966);
     padding: 10px;
-    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 }
 
-.footer-h3{
-    color: black;
-    font-weight: 700;
+.redes-footer{
+    display: flex;
+    justify-content: space-between;
+
 }
 
 footer img{
     height: 50px;
 }
 
-/*------------Responsive-------------*/
 
-@media (max-width: 700px){
+
+/* --------RESPONSIVE---------- */
+
+/* @media (max-width: 700px){
     header{
         flex-direction: column;
     }
@@ -145,7 +368,17 @@ footer img{
     nav{
         padding: 10px 0px;
     }
-    .productos{
+    .gran-contenedor{
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+} */
+
+@media (max-width: 700px){
+    header{
+        display: flex;
         flex-direction: column;
     }
+
+    
+    
 }
